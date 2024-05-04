@@ -1,0 +1,73 @@
+POST http://localhost:5000/api/v1/test/test-post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMxMmNiYmZlZDFiYTczNDM5YTQ1NzMiLCJpYXQiOjE3MTQ1NTI1NjUsImV4cCI6MTcxNDYzODk2NX0.joWNtothebGYeBM6vflg391ry8pFvXBN0fJyqSV14UA
+
+{
+    "name": "Gaikwad"
+}
+
+###
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "name": "User2",
+    "email": "user2@domain.com",
+    "password": "123456789"
+}
+
+###
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "user2@domain.com",
+    "password": "123456789"
+}
+
+###
+PUT http://localhost:5000/api/v1/user/update-user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMxMmNiYmZlZDFiYTczNDM5YTQ1NzMiLCJpYXQiOjE3MTQ1Njk4NTUsImV4cCI6MTcxNDY1NjI1NX0.-vhkZaaM3l0WsdUx7II-YD12Iz-a5YMykExU5FHKDdg
+
+{
+    "name": "User",
+    "lastName": "One",
+    "email": "user@domain.com",
+    "location": "US"
+}
+
+###
+POST http://localhost:5000/api/v1/job/create-job
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMzYjdiNjM3MWE4NGMyMDhjOTcxZjgiLCJpYXQiOjE3MTQ4MDk2MDgsImV4cCI6MTcxNDg5NjAwOH0.WYOl1FKThHNua6PvKWRSuwFyMHJ7JLQgZu7iS7f-3Zk
+
+{
+    "company": "KK",
+    "position": "Software Dev"
+}
+
+###
+GET http://localhost:5000/api/v1/job/get-jobs?sort=a-z&page=1&limit=11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMzYjdiNjM3MWE4NGMyMDhjOTcxZjgiLCJpYXQiOjE3MTQ4MDk2MDgsImV4cCI6MTcxNDg5NjAwOH0.WYOl1FKThHNua6PvKWRSuwFyMHJ7JLQgZu7iS7f-3Zk
+
+###
+PATCH http://localhost:5000/api/v1/job/update-job/6633b63c01daf7665f88a1c8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMzYjVkODAxZGFmNzY2NWY4OGExYzUiLCJpYXQiOjE3MTQ2NjQ5NzEsImV4cCI6MTcxNDc1MTM3MX0.DCABY36CXIu2xADw-5yFZ2R09oM-8Y51sYPQW4X2o_s
+
+{
+    "company": "Krishna Industry",
+    "position": "IT dev",
+    "status": "interview"
+}
+
+###
+DELETE http://localhost:5000/api/v1/job/delete-job/6633d9d85b663f929889635e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMzYjVkODAxZGFmNzY2NWY4OGExYzUiLCJpYXQiOjE3MTQ2NzQyMTYsImV4cCI6MTcxNDc2MDYxNn0.phL-Xnj6uhrUwCpWSeF1xw9Q3_Ofm5hwdxRL8rS6URw
+
+###
+GET http://localhost:5000/api/v1/job/job-stats
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjMzYjdiNjM3MWE4NGMyMDhjOTcxZjgiLCJpYXQiOjE3MTQ4MDk2MDgsImV4cCI6MTcxNDg5NjAwOH0.WYOl1FKThHNua6PvKWRSuwFyMHJ7JLQgZu7iS7f-3Zk
